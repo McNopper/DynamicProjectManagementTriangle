@@ -11,15 +11,17 @@
 
 ## Abstract
 
-The **Project Management Triangle** — relating scope, time, and cost as interdependent constraints — is a well-established model in the project management literature (Barnes, 1969; Kerzner, 2017; Project Management Institute, 2017). Several extensions and adjacent contributions exist: quality as the implicit outcome of constraint balance (Atkinson, 1999), time-boxed iteration fixing time and cost while varying scope (Sutherland & Schwaber, 2020), deferred commitment in Lean development (Poppendieck & Poppendieck, 2003), buffer management in the Theory of Constraints (Goldratt, 1997), and strategic pivoting in Lean Startup methodology (Ries, 2011).
+The **Project Management Triangle** — relating scope, time, and cost as interdependent constraints — is a well-established model in the project management literature (Barnes, 1969; Kerzner, 2017; Project Management Institute, 2017). Several extensions and adjacent contributions exist: quality as the implicit outcome of constraint balance (Atkinson, 1999), time-boxed iteration fixing time and cost while varying scope (Beck, 1999; Sutherland & Schwaber, 2020), deferred commitment in Lean development (Poppendieck & Poppendieck, 2003), buffer management in the Theory of Constraints (Goldratt, 1997), and strategic pivoting in Lean Startup methodology (Ries, 2011).
 
-**Building on this prior art, this document contributes:**
+The individual ingredients of this document are therefore not new. What this document offers is a **novel synthesis**: a single, explicit framework that unifies these scattered ideas into a small, named set of configurations and a structured rule for moving between them. Concretely:
 
-1. **An explicit Fixed/Variable vocabulary and configuration map.** Each of the three triangle constraints is classified as either *Fixed* (F) or *Variable* (V) at any point in time. All 2³ = 8 binary assignments are enumerated and named, the two degenerate cases (all-fixed, all-variable) are explicitly identified as non-viable, and the six valid configurations are aligned with established delivery patterns (Fixed-Price, Agile Sprint, Cost-Plus, and so on). The enumeration itself is trivial; the contribution is providing a single shared vocabulary for configurations that the existing literature describes only in isolation.
+1. **A unified Fixed/Variable configuration map.** Each of the three constraints is classified as either *Fixed* (F) or *Variable* (V) at any point in time. All 2³ = 8 binary assignments are enumerated, the two degenerate cases (all-fixed, all-variable) are identified as non-viable, and the six valid configurations are aligned with established delivery patterns (Fixed-Price, Scrum, Cost-Plus, and so on). The enumeration is trivial in itself; the contribution is the *shared vocabulary* — the existing literature describes these configurations only in isolation, under method-specific names.
 
-2. **Status-quo-anchored configuration pivoting.** Building on Ries' (2011) notion of the pivot as a strategic course correction, this document defines *configuration pivoting*: the deliberate re-assignment of the F/V status of the triangle's constraints in response to new information. The key procedural claim is that a pivot is anchored to the **current actual values** of scope, time, and cost at the moment of re-configuration — not to the original plan — preserving continuity while changing the governing constraint model.
+2. **Status-quo-anchored configuration pivoting (the principal novel element).** Building on Ries' (2011) notion of the pivot as a strategic course correction, this document defines *configuration pivoting*: the deliberate re-assignment of the F/V status of the triangle's constraints. The procedural claim is that the pivot is anchored to the **current actual values** of scope, time, and cost at the moment of re-configuration — not to the original plan — preserving continuity while changing the governing constraint model. Existing literature discusses *project* or *strategic* pivots; the explicit pivot of the *constraint configuration itself*, anchored to the present rather than the baseline, is the contribution made here.
 
-3. **Intentionality as a management primitive.** The Fixed/Variable assignment of each constraint is treated as a first-class, explicitly negotiated management decision rather than an emergent property of execution. The argument is that leaving this assignment implicit — as conventional triangle usage does — is a primary source of unacknowledged trade-offs, hidden quality degradation, and stakeholder misalignment.
+3. **Intentionality as an explicit management decision.** The F/V assignment is treated as a first-class, openly negotiated decision rather than an emergent property of execution. This is more a framing argument than an empirical result, but framing matters: leaving the assignment implicit — as conventional triangle usage does — is a recurring source of unacknowledged trade-offs and stakeholder misalignment.
+
+**Scope and limitations.** This is a practitioner-oriented synthesis, not a peer-reviewed empirical study. No quantitative validation is offered. The document is intended as a manager's reference: a vocabulary and a procedure, not a proof.
 
 ---
 
@@ -38,14 +40,6 @@ The core insight is that these three constraints are coupled: changing one force
 A widely accepted extension places **Quality** at the interior of the triangle, representing the implicit outcome that results from how the three constraints are balanced (Atkinson, 1999; Project Management Institute, 2017). Quality is not a fourth independent constraint — it is the emergent product of the trade-offs made among scope, time, and cost. All diagrams in this document label the interior accordingly.
 
 ![Classic Project Management Triangle](images/classic.svg)
-
-### References
-
-- **Harold Kerzner** — *Project Management: A Systems Approach to Planning, Scheduling, and Controlling* (12th ed., Wiley, 2017) — foundational treatment of the triple constraint.
-- **PMI PMBOK Guide** — *A Guide to the Project Management Body of Knowledge* (7th ed., Project Management Institute, 2021) — the industry-standard reference for constraints, trade-offs, and adaptive project delivery.
-- **Martin Barnes** (1969) — Early formalization of cost–time–performance trade-offs in project management, widely credited as the origin of the triangle model.
-- **Atkinson, R.** (1999) — *"Cost, time and quality, two best guesses and a phenomenon, its time to accept other success criteria"* — Information Systems Journal, 9(3), pp. 337–342. A critical review of the triangle and its limitations.
-- **Wysocki, R. K.** — *Effective Project Management: Traditional, Agile, Extreme* (7th ed., Wiley, 2014) — covers adaptive and agile extensions of the triangle.
 
 ---
 
@@ -80,13 +74,6 @@ flowchart LR
     D --> E([Continue under<br/>new configuration])
     E -->|next change| B
 ```
-
-### References on Pivoting
-
-- **Eric Ries** — *The Lean Startup* (Crown Business, 2011) — defines pivoting as a structured course correction.
-- **Jeff Sutherland & Ken Schwaber** — *The Scrum Guide* (2020) — Scrum's sprint model implicitly pivots scope within fixed time-boxes and team size (cost).
-- **Mary & Tom Poppendieck** — *Lean Software Development: An Agile Toolkit* (Addison-Wesley, 2003) — trade-off decisions and deferred commitment as tools for managing the triangle dynamically.
-- **Goldratt, E. M.** — *Critical Chain* (North River Press, 1997) — introduces buffer management as a mechanism to absorb variability in time and cost while protecting scope.
 
 ---
 
@@ -267,9 +254,7 @@ Poppendieck, M., & Poppendieck, T. (2003). *Lean Software Development: An Agile 
 
 Project Management Institute. (2017). *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* (6th ed.). PMI.
 
-Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* (7th ed.). PMI.
-
-Ries, E. (2011). *The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses*. Crown Business.
+Ries, E. (2011).*The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses*. Crown Business.
 
 Sutherland, J., & Schwaber, K. (2020). *The Scrum Guide*. Scrum.org. https://scrumguides.org
 
