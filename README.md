@@ -15,13 +15,36 @@ The **Project Management Triangle** — relating scope, time, and cost as interd
 
 The individual ingredients of this document are therefore not new. What this document offers is a **novel synthesis**: a single, explicit framework that unifies these scattered ideas into a small, named set of configurations and a structured rule for moving between them. Concretely:
 
-1. **A unified Fixed/Variable configuration map.** Each of the three constraints is classified as either *Fixed* (F) or *Variable* (V) at any point in time. All 2³ = 8 binary assignments are enumerated, the two degenerate cases (all-fixed, all-variable) are identified as non-viable, and the six valid configurations are aligned with established delivery patterns (Fixed-Price, Scrum, Cost-Plus, and so on). The enumeration is trivial in itself; the contribution is the *shared vocabulary* — the existing literature describes these configurations only in isolation, under method-specific names.
+1. **A unified Fixed/Variable configuration map.** Each of the three constraints is classified as either *Fixed* (F) or *Variable* (V) at any point in time. All 2³ = 8 binary assignments are enumerated, the two degenerate cases (all-fixed, all-variable) are identified as non-viable, and the six valid configurations are aligned with established delivery patterns. The enumeration itself is not new — Wysocki (2014) already presents a "flexibility matrix" over the same constraints, and DSDM (Stapleton, 2003) prioritises constraints in a comparable fashion. The contribution here is the *shared, neutral vocabulary*: the same configurations under method-agnostic F/V labels rather than method-specific brand names, and a single map covering all six valid cases on equal footing.
 
-2. **Status-quo-anchored configuration pivoting (the principal novel element).** Building on Ries' (2011) notion of the pivot as a strategic course correction, this document defines *configuration pivoting*: the deliberate re-assignment of the F/V status of the triangle's constraints. The procedural claim is that the pivot is anchored to the **current actual values** of scope, time, and cost at the moment of re-configuration — not to the original plan — preserving continuity while changing the governing constraint model. Existing literature discusses *project* or *strategic* pivots; the explicit pivot of the *constraint configuration itself*, anchored to the present rather than the baseline, is the contribution made here.
+2. **Explicit, named configuration pivoting (the principal novel element).** Building on Ries' (2011) notion of the pivot as a strategic course correction, this document defines *configuration pivoting*: the deliberate re-assignment of the F/V status of the triangle's constraints. Adjacent practices already do this implicitly — rolling-wave planning, re-baselining (Project Management Institute, 2017), and Scrum's empirical inspect-and-adapt cycle (Sutherland & Schwaber, 2020) all adjust constraints in flight. What this document adds is to make the act explicit and named, with a procedural rule: the pivot is **anchored to the current actual values** of scope, time, and cost at the moment of re-configuration — not to the original baseline. Naming the action and the anchor is the contribution; the practice itself has analogues.
 
 3. **Intentionality as an explicit management decision.** The F/V assignment is treated as a first-class, openly negotiated decision rather than an emergent property of execution. This is more a framing argument than an empirical result, but framing matters: leaving the assignment implicit — as conventional triangle usage does — is a recurring source of unacknowledged trade-offs and stakeholder misalignment.
 
 **Scope and limitations.** This is a practitioner-oriented synthesis, not a peer-reviewed empirical study. No quantitative validation is offered. The document is intended as a manager's reference: a vocabulary and a procedure, not a proof.
+
+---
+
+## How to Use This Document
+
+This guide is intended as a working reference, not background reading. Two practical habits are enough to put it to use:
+
+- **At kickoff and at every review,** ask out loud and record the answer: *Which of scope, time, and cost is Fixed? Which is Variable?* Treat the answer as a first-class artifact, alongside the schedule and the budget.
+- **When something changes** — requirements, dependencies, market, funding — run a deliberate **configuration pivot**: capture the *current actual* scope, time, and cost (not the original plan), then re-decide F/V from there. The Pivoting section below describes the procedure.
+
+If you read nothing else, read the *Pivoting* section and the *Summary Table*.
+
+---
+
+## Glossary
+
+- **Constraint** — one of *scope*, *time*, *cost*: the three coupled dimensions of the triangle.
+- **Fixed (F)** — a constraint that is locked for the current configuration and must be respected.
+- **Variable (V)** — the absorber: the constraint that flexes when reality diverges from plan.
+- **Configuration** — an assignment of F or V to each of the three constraints. There are 2³ = 8 such assignments, of which 6 are viable.
+- **Quality** — the implicit outcome of a configuration; not a fourth constraint, but the consequence of how F and V are chosen and respected (Atkinson, 1999).
+- **Status quo** — the *current actual* values of scope, time, and cost at a given moment, as opposed to the original baseline.
+- **Pivot** — a deliberate, named change of configuration, anchored to the status quo rather than to the baseline.
 
 ---
 
@@ -69,8 +92,8 @@ A pivot is therefore not a reset and not an admission of failure — it is a str
 ```mermaid
 flowchart LR
     A([Project running<br/>under current config]) --> B{Context<br/>changes}
-    B --> C["1️⃣ Capture status quo<br/>Scope · Time · Cost<br/>actual values right now"]
-    C --> D["2️⃣ Re-assign Fixed / Variable<br/>explicitly as a team"]
+    B --> C["<b>1.</b> Capture status quo<br/>Scope · Time · Cost<br/>actual values right now"]
+    C --> D["<b>2.</b> Re-assign Fixed / Variable<br/>explicitly as a team"]
     D --> E([Continue under<br/>new configuration])
     E -->|next change| B
 ```
@@ -83,7 +106,7 @@ With three binary constraints there are 2³ = **8 configurations**. Two of these
 
 ---
 
-### 1 — Scope Fixed · Time Fixed · Cost Variable *(Fixed-Price Contract)*
+### 1 — Scope Fixed · Time Fixed · Cost Variable *(Regulatory / Hard-Deadline Compliance)*
 
 ![Permutation 1: Scope Fixed, Time Fixed, Cost Variable](images/perm1_FFV.svg)
 
@@ -157,7 +180,7 @@ With three binary constraints there are 2³ = **8 configurations**. Two of these
 
 **What it means:** The deadline is the only non-negotiable. Scope is pruned and budget adjusted to meet it.
 
-**When to use it:** Market-window products where shipping late means shipping never (e.g., seasonal campaigns, competitive launches). Teams cut features and add resources simultaneously to hit the date.
+**When to use it:** Market-window products where shipping late means shipping never (e.g., seasonal campaigns, competitive launches). To hit the date, scope can be cut, budget can grow, or both — whichever is cheaper at the time.
 
 **Pivot signal:** The deadline itself becomes commercially irrelevant (market window closed) → pivot to a Scope Fixed configuration and deliver correctly rather than quickly.
 
@@ -223,7 +246,7 @@ Making all three constraints variable simultaneously removes all meaningful acco
 
 | # | Scope | Time | Cost | Methodology / Pattern |
 |---|-------|------|------|-----------------------|
-| 1 | F | F | V | Fixed-Price Contract |
+| 1 | F | F | V | Regulatory / Hard-Deadline Compliance |
 | 2 | F | V | F | Internal Migration / Capped-Budget Delivery |
 | 3 | V | F | F | Scrum / Agile Sprint |
 | 4 | F | V | V | Cost-Plus Contract |
@@ -254,7 +277,9 @@ Poppendieck, M., & Poppendieck, T. (2003). *Lean Software Development: An Agile 
 
 Project Management Institute. (2017). *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* (6th ed.). PMI.
 
-Ries, E. (2011).*The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses*. Crown Business.
+Ries, E. (2011). *The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses*. Crown Business.
+
+Stapleton, J. (2003). *DSDM: Business Focused Development* (2nd ed.). Addison-Wesley.
 
 Sutherland, J., & Schwaber, K. (2020). *The Scrum Guide*. Scrum.org. https://scrumguides.org
 
