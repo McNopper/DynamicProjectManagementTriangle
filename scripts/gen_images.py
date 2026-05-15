@@ -1,7 +1,9 @@
 import os
 
+import cairosvg
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUT_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "images")
+OUT_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "figures")
 
 W, H = 340, 330
 R = 34
@@ -145,10 +147,13 @@ files = {
 }
 
 for name, content in files.items():
-    path = os.path.join(OUT_DIR, f"{name}.svg")
-    with open(path, "w", encoding="utf-8") as fh:
+    svg_path = os.path.join(OUT_DIR, f"{name}.svg")
+    pdf_path = os.path.join(OUT_DIR, f"{name}.pdf")
+    with open(svg_path, "w", encoding="utf-8") as fh:
         fh.write(content)
-    print(f"wrote {path}")
+    print(f"wrote {svg_path}")
+    cairosvg.svg2pdf(bytestring=content.encode("utf-8"), write_to=pdf_path)
+    print(f"wrote {pdf_path}")
 
 # Verify no clipping
 print("\n--- Clipping check ---")

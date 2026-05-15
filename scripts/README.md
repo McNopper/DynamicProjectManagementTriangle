@@ -2,7 +2,9 @@
 
 ## `gen_images.py`
 
-Regenerates all SVG diagrams in `../images/` from a single source of truth.
+Regenerates all diagrams in `../figures/` from a single source of truth.
+Each diagram is written as both SVG (used by the README) and PDF (included
+in `paper.tex`).
 
 **Run from the repository root:**
 
@@ -10,11 +12,15 @@ Regenerates all SVG diagrams in `../images/` from a single source of truth.
 python scripts/gen_images.py
 ```
 
-This produces:
+Requires the `cairosvg` Python package for the SVG → PDF conversion.
 
-- `images/classic.svg` — neutral classic triangle (Scope/Time/Cost)
-- `images/perm1_FFV.svg` … `images/perm6_VVF.svg` — the six valid Fixed/Variable configurations
-- `images/degen_FFF.svg`, `images/degen_VVV.svg` — degenerate (non-viable) cases
+This produces, for each of:
+
+- `classic` — neutral classic triangle (Scope/Time/Cost)
+- `perm1_FFV` … `perm6_VVF` — the six valid Fixed/Variable configurations
+- `degen_FFF`, `degen_VVV` — degenerate (non-viable) cases
+
+both a `.svg` and a `.pdf` file in `figures/`.
 
 **Conventions used in the diagrams:**
 
