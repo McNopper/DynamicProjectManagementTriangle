@@ -123,8 +123,9 @@ Two practical habits are enough to put it to use:
   Section~\ref{sec:pivoting} describes the procedure.
 \end{itemize}
 
-If you read nothing else, read Section~\ref{sec:pivoting} and the
-summary table (Section~\ref{sec:summary}).
+If you read nothing else, read Section~\ref{sec:pivoting} (including the
+worked example in Section~\ref{sec:worked-example}) and the summary table
+(Section~\ref{sec:summary}).
 
 \section{Glossary}
 \label{sec:glossary}
@@ -267,6 +268,41 @@ anchored to reality.
 \caption{The configuration pivot procedure.}
 \label{fig:pivot}
 \end{figure}
+
+\subsection{Worked Example: Why the Anchor Matters}
+\label{sec:worked-example}
+
+The defining detail of a configuration pivot is its \emph{anchor}: the
+new configuration is decided from the \textbf{current actual} state, not
+from the original plan. A short example makes the difference concrete.
+
+A team commits to a baseline: \emph{scope} of 30 features, \emph{time}
+of 6 months, \emph{cost} of one 5-person team. Time and cost are fixed;
+scope is the absorber (configuration V$\cdot$F$\cdot$F, the Scrum
+pattern). Four months in, the actual state has diverged: 12 features are
+done, a key dependency has slipped, and a hard external deadline has
+appeared two months out. A pivot is triggered.
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Baseline-anchored (the anti-pattern).} The team measures
+  progress against the original 30 features and 6 months. The remaining
+  18 features are treated as still owed, the original end date as still
+  binding. Pressure is absorbed covertly --- overtime, quietly dropped
+  quality --- because the plan on paper was never renegotiated.
+  \item \textbf{Status-quo-anchored (the pivot).} The team records the
+  real state right now: 12 features shipped, 2 months of runway, the
+  same 5-person team. \emph{From that point}, it re-decides F/V. The new
+  external deadline makes time the hard constraint; budget is opened to
+  allow short-term contractors; scope for the remaining window is
+  re-negotiated down to what genuinely fits. The configuration pivots to
+  V$\cdot$F$\cdot$V (Ship-to-Date), explicitly and on the record.
+\end{itemize}
+
+\noindent
+Both teams face the same reality. The status-quo-anchored team converts
+it into an open, named decision with a sanctioned absorber; the
+baseline-anchored team carries a stale plan and pays for the gap in
+hidden trade-offs. The anchor, not the re-planning, is the contribution.
 
 \section{All Configurations of Fixed and Variable Constraints}
 \label{sec:configurations}
